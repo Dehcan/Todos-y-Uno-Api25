@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoapp"
+    android:orientation="vertical">
+    <include layout="@layout/appbar">
+
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:id="@+id/menuAviso"
+            android:text="Aviso"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:id="@+id/botonpanico"
+            android:text="Botón de pánico"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:id="@+id/botonadvertencia"
+            android:text="Advertencia"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:id="@+id/reportar"
+            android:text="Reportar un usuario"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

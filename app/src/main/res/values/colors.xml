@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ghostwhite">#A2FFFFFF</color>
+
+    <color name="gray">#88D9D9D9</color>
+    <color name="fondoapp">#636EEB</color>
+    <color name="blue">#243FC8</color>
+
+    <color name="grey">#D9D9D9</color>
+    <color name="fondo">#636EEB</color>
+    <color name="semiwhite">#D6DAF8</color>
+    <color name="appbar">#713EA9</color>
 </resources>

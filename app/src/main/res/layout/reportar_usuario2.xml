@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Alejandro Merino-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reportarusuario2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#636EEB"
+    android:orientation="vertical"
+    tools:context=".ReportarUsuario2">
+    <include layout="@layout/appbar3">
+
+    </include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Reportar un Usuario"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="25sp">
+
+            </TextView>
+        </RelativeLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:text="Escriba la razon del reporte"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:textSize="20sp">
+
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="top"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="150dp"
+            android:hint="Razón de Reporte"
+            android:scrollHorizontally="false"
+            android:overScrollMode="always"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:background="@color/grey"
+            android:backgroundTint="@color/white"
+            android:inputType="textMultiLine"
+            android:lines="11"
+            android:padding="10dp"
+            android:textColorHint="@color/grey">
+
+        </EditText>
+    </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/enviarreport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar Reporte"
+                android:layout_centerInParent="true"
+                android:textSize="20dp">
+
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
