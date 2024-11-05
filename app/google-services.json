@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "640894189726",
+    "project_id": "todosyunoapi25",
+    "storage_bucket": "todosyunoapi25.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640894189726:android:f8aa2da5726e54a4e03b8f",
+        "android_client_info": {
+          "package_name": "cl.example.proyectotodosyunoapi25"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClKw85-dO-vdBqNajnJenr-PFF3yX1VZs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

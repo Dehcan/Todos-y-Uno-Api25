@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/retrocederboton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_alignParentLeft="true">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/menuboton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu_24"
+            android:layout_alignParentRight="true">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/logoutboton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="49dp"
+            android:src="@drawable/baseline_logout_24">
+
+        </ImageButton>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
