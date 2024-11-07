@@ -18,7 +18,7 @@ public class AjustesApp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.vibraciones);
+        setContentView(R.layout.ajustes_app);
 
         ImageButton botonretroceder = (ImageButton) findViewById(R.id.backbutton);
         botonretroceder.setOnClickListener(new View.OnClickListener() {
