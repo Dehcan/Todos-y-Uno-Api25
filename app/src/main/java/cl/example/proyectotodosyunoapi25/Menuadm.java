@@ -3,6 +3,7 @@ package cl.example.proyectotodosyunoapi25;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -43,6 +44,50 @@ public class Menuadm extends AppCompatActivity {
                 Intent intent = new Intent(Menuadm.this, Menu2.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        Button gestuser = (Button) findViewById(R.id.gestiondeusuario);
+        gestuser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menuadm.this, Gestionusuario.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button gestaviso = (Button) findViewById(R.id.gestiondeaviso);
+        gestaviso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menuadm.this, Gestionaviso.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button switchuser = (Button) findViewById(R.id.switchadm);
+        switchuser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menuadm.this, Menu.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button register = (Button) findViewById(R.id.registerus);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menuadm.this, Register.class);
+                startActivity(intent);
+                finish();
+
             }
         });
 

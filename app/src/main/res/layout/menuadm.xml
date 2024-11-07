@@ -62,6 +62,13 @@
             android:text="Switch a modo usuario"
             android:layout_marginBottom="10dp"/>
 
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:id="@+id/registerus"
+            android:text="Registrar usuario"
+            android:layout_marginBottom="10dp"/>
+
     </LinearLayout>
 
 </LinearLayout>
