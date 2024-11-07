@@ -45,6 +45,27 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        ImageButton menu2 = (ImageButton) findViewById(R.id.menuboton);
+        menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Menu2.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        ImageButton logout = (ImageButton) findViewById(R.id.logoutboton);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Menu2.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
 
 
     }
