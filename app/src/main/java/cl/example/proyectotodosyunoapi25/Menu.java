@@ -3,6 +3,7 @@ package cl.example.proyectotodosyunoapi25;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -54,17 +55,50 @@ public class Menu extends AppCompatActivity {
                 finish();
             }
         });
-        ImageButton logout = (ImageButton) findViewById(R.id.logoutboton);
-        logout.setOnClickListener(new View.OnClickListener() {
+
+        Button aviso = (Button) findViewById(R.id.menuAviso);
+        aviso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Menu.this, Menu2.class);
+                Intent intent = new Intent(Menu.this, Aviso.class);
                 startActivity(intent);
                 finish();
+
             }
         });
 
+        Button botonpanico = (Button) findViewById(R.id.botonpanico);
+        botonpanico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Botonp.class);
+                startActivity(intent);
+                finish();
 
+            }
+        });
+
+        Button advertencia = (Button) findViewById(R.id.botonadvertencia);
+        advertencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Advertencia.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button reportaruser = (Button) findViewById(R.id.reportar);
+        botonpanico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, ReportarUsuario.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
 
 

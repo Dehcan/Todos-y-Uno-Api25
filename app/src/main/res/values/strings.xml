@@ -2,20 +2,20 @@
     <string name="app_name">ProyectoTodosyUnoAPI25</string>
     <string name="todos_y_uno">Todos y Uno</string>
     <string name="email">Email</string>
-<string name="sesiónlista">Sesión Iniciada</string>
-<string name="espere">Espere un momento</string>
-<string name="descripcionlogin">Inicio de sesion. Por favor, inicia sesión con tu cuenta</string>
-<string name="username">Usuario</string>
-<string name="password">Introduce tu contraseña</string>
-<string name="bemergencia">Este botón se activará y notificará a todos los demás usuarios sobre lo sucedido, se recomienda no abusar  de este botón  y usarlo en momentos serios</string>
-<string name="lorem">lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius urna nec facilisis iaculis. Sed vel iaculis ipsum, ornar  sollicitudin magna.</string>
+    <string name="sesiónlista">Sesión Iniciada</string>
+    <string name="espere">Espere un momento</string>
+    <string name="descripcionlogin">Inicio de sesion. Por favor, inicia sesión con tu cuenta</string>
+    <string name="username">Usuario</string>
+    <string name="password">Introduce tu contraseña</string>
+    <string name="bemergencia">Este botón se activará y notificará a todos los demás usuarios sobre lo sucedido, se recomienda no abusar  de este botón  y usarlo en momentos serios</string>
+    <string name="lorem">lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius urna nec facilisis iaculis. Sed vel iaculis ipsum, ornar  sollicitudin magna.</string>
     <!-- Strings used for fragments for navigation -->
-<string name="first_fragment_label">First Fragment</string>
-<string name="second_fragment_label">Second Fragment</string>
-<string name="next">Next</string>
-<string name="previous">Previous</string>
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-<string name="lorem_ipsum">
+    <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
         dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad

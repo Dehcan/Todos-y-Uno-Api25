@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/new_user"
+    android:id="@+id/edittuser2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Register"
@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Crear usuario"
+            android:text="Editar usuario"
             android:paddingTop="30dp"
             android:textSize="30sp"
             android:textColor="#FFFFFF"
@@ -69,7 +69,7 @@
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:id="@+id/createmail"/>
+                android:id="@+id/editmail"/>
 
         </LinearLayout>
 
@@ -107,7 +107,7 @@
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:id="@+id/createname"/>
+                android:id="@+id/editname"/>
 
         </LinearLayout>
 
@@ -145,7 +145,7 @@
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:id="@+id/createdirection"/>
+                android:id="@+id/editdirection"/>
 
         </LinearLayout>
 
@@ -180,7 +180,7 @@
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:id="@+id/createpass"
+                android:id="@+id/editpass"
                 />
 
         </LinearLayout>
@@ -216,7 +216,7 @@
                 android:padding="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:id="@+id/confirmpass"
+                android:id="@+id/editconfirmpass"
                 />
 
         </LinearLayout>
@@ -232,10 +232,10 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/registeruser"
+            android:id="@+id/finalicedit"
             android:layout_width="200dp"
             android:layout_height="90dp"
-            android:text="Completar registro"
+            android:text="Finalizar"
 
             android:textSize="20dp">
 
