@@ -17,50 +17,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="3.2"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3.5"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3.5">
-            <RelativeLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Escriba la advertencia al usuario"
-                    android:layout_centerInParent="true"
-                    android:textColor="@color/white"
-                    android:textSize="25sp">
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:text="Escribir advertencia al usuario"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="30dp">
+            </TextView>
 
-                </TextView>
-            </RelativeLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="5">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
