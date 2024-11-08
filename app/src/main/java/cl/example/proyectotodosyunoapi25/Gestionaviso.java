@@ -3,6 +3,7 @@ package cl.example.proyectotodosyunoapi25;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +27,39 @@ public class Gestionaviso extends AppCompatActivity {
                 Intent intent = new Intent(Gestionaviso.this, Menuadm.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        Button Revisaraviso = (Button) findViewById(R.id.revisaraviso);
+        Revisaraviso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Gestionaviso.this, Revisaravisos.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button deleteaviso = (Button) findViewById(R.id.almaviso);
+        deleteaviso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Gestionaviso.this, Eliminaravisos.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button acepaviso = (Button) findViewById(R.id.acepaviso);
+        acepaviso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Gestionaviso.this, Aceptaraviso.class);
+                startActivity(intent);
+                finish();
+
             }
         });
 

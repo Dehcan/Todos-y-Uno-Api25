@@ -66,6 +66,15 @@
             android:id="@+id/elmusuario"
             android:layout_marginBottom="10dp"/>
 
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_edittext_border"
+            android:backgroundTint="@android:color/transparent"
+            android:text="Editar usuario"
+            android:id="@+id/editarusuario"
+            android:layout_marginBottom="10dp"/>
+
     </LinearLayout>
 
     <LinearLayout
