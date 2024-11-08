@@ -30,6 +30,27 @@ public class Notificaciones extends AppCompatActivity {
             }
         });
 
+        Button Silenciar = (Button) findViewById(R.id.silenciardurante);
+        Silenciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Notificaciones.this, Silenciar.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
+        Button Vibracion = (Button) findViewById(R.id.vibraciones);
+        Vibracion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Notificaciones.this, Vibraciones.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.notificaciones), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

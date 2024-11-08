@@ -8,9 +8,6 @@ import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class AjustesApp extends AppCompatActivity {
 
@@ -27,6 +24,29 @@ public class AjustesApp extends AppCompatActivity {
                 Intent intent = new Intent(AjustesApp.this, Menu2.class);
                 startActivity(intent);
                 finish();
+
+                Button Fuente = (Button) findViewById(R.id.tamañodefuente);
+                Fuente.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(AjustesApp.this, Fuente.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
+                });
+
+                Button Noti = (Button) findViewById(R.id.notificacion);
+                Noti.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(AjustesApp.this, Notificaciones.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
+                });
+
 
             }
         });
