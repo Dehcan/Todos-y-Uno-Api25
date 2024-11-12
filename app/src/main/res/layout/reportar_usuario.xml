@@ -58,138 +58,17 @@
         android:layout_weight="1"
         android:orientation="vertical">
 <!--Aqui tenemos que modificarlo para que aparezca la lista de usuarios que estan en la app-->
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/perfil">
-                </ImageView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/repor_user1"
-                        android:text="Evaristo Moya"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:width="150dp"
-                        android:height="25dp"
-                        android:layout_centerInParent="true"
-                        android:backgroundTint="@color/grey"
-                        android:textSize="20dp"
-                        android:background="#636EEB"
-                        android:textStyle="italic"
-                        android:singleLine="true"
-                        android:gravity="center"
-                        android:inputType="textEmailAddress">
-
-                    </TextView>
-                </RelativeLayout>
-
-            </LinearLayout>
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:clipToPadding="false"
+            />
 
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/perfil">
-                </ImageView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:text="Jack Sparrow"
-                        android:id="@+id/repor_user2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:width="150dp"
-                        android:height="25dp"
-                        android:layout_centerInParent="true"
-                        android:backgroundTint="@color/grey"
-                        android:textSize="20dp"
-                        android:background="#636EEB"
-                        android:textStyle="italic"
-                        android:singleLine="true"
-                        android:gravity="center"
-                        android:inputType="textEmailAddress">
-
-                    </TextView>
-                </RelativeLayout>
-
-            </LinearLayout>
 
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/perfil">
-                </ImageView>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:id="@+id/repor_user3"
-                        android:text="John Doe"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:width="150dp"
-                        android:height="25dp"
-                        android:layout_centerInParent="true"
-                        android:backgroundTint="@color/grey"
-                        android:textSize="20dp"
-                        android:background="#636EEB"
-                        android:textStyle="italic"
-                        android:singleLine="true"
-                        android:gravity="center"
-                        android:inputType="textEmailAddress">
-
-                    </TextView>
-                </RelativeLayout>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
     </LinearLayout>
 </LinearLayout>
