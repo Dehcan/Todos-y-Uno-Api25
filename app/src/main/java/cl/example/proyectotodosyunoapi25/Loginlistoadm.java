@@ -37,6 +37,6 @@ public class Loginlistoadm extends AppCompatActivity {
 
                 handler.removeCallbacks(null);
             }
-        }, tiempoTranscurrir );//define el tiempo.
+        }, tiempoTranscurrir );
     }
 }

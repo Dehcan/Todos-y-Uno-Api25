@@ -8,122 +8,216 @@
     android:id="@+id/infolegal"
     android:background="@color/fondoapp"
     tools:context=".Infolegal">
-    <include layout="@layout/appbar3">
 
-    </include>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1.1"
-        android:orientation="vertical"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:text="Información Legal"
-            android:textAlignment="center"
-            android:textSize="30dp">
-        </TextView>
+    <include layout="@layout/appbar3" />
 
-    </LinearLayout>
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/circle2" />
+            android:orientation="vertical">
 
             <TextView
-
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Aviso Legal de la Aplicación “Todos y Uno"
+                android:layout_gravity="center"
                 android:textColor="@color/white"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius urna nec facilisis iaculis. Sed vel iaculis ipsum, ornare sollicitudin magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/circle2" />
+                android:textSize="21sp">
+            </TextView>
 
             <TextView
-
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="Última actualización: 13-11-2024"
+                android:layout_gravity="center"
                 android:textColor="@color/white"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius urna nec facilisis iaculis. Sed vel iaculis ipsum, ornare sollicitudin magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="10dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/circle2" />
+                android:textSize="16sp">
+            </TextView>
 
             <TextView
-
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:textStyle="bold"
+                android:text="1. Aceptación de los Términos y Condiciones"
+                android:layout_gravity="center"
                 android:textColor="@color/white"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius urna nec facilisis iaculis. Sed vel iaculis ipsum, ornare sollicitudin magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Al descargar y usar la aplicación “Todos y Uno” (en adelante, “la App”), usted acepta los siguientes términos y condiciones. Si no está de acuerdo con estos términos, le recomendamos que no utilice la App. “Todos y Uno” es una aplicación desarrollada con fines educativos en el contexto de un proyecto universitario en Chile.
+"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="2. Uso de la Aplicación"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="La App tiene como objetivo proporcionar una plataforma para que los usuarios se mantengan informados de avisos y alertas comunales. El usuario es responsable del uso adecuado de las herramientas, tales como la publicación de alertas y el botón de pánico, y se compromete a utilizar la App respetando a otros usuarios.
+"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="3. Responsabilidad sobre Contenidos"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="“Todos y Uno” no se hace responsable del contenido publicado por los usuarios. Cada usuario es responsable de la veracidad y legalidad de los avisos y alertas que emita. Cualquier uso indebido o inapropiado será causa de sanción y, de ser necesario, podría llevar al bloqueo de la cuenta.
+"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="4. Limitación del Botón de Pánico"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Para evitar abusos, el botón de pánico solo podrá usarse una vez cada 30 minutos por usuario. Esta herramienta está diseñada únicamente para alertar en situaciones de emergencia, y su mal uso está prohibido.
+"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="5. Recolección de Datos y Privacidad"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="La App recopila información básica de los usuarios, como nombre y ubicación aproximada, únicamente para proporcionar los servicios de avisos. La App no compartirá esta información con terceros sin el consentimiento expreso del usuario, salvo en caso de requerimientos legales por parte de autoridades competentes en Chile. Toda la información es manejada de acuerdo con las leyes de protección de datos chilenas (Ley N° 19.628 sobre protección de la vida privada).
+"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="6. Exención de Responsabilidad"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="El equipo de desarrollo de “Todos y Uno” no se hace responsable por cualquier daño directo o indirecto que pueda derivarse del uso de la App. Esta aplicación se provee “tal cual”, sin garantías de ningún tipo.
+"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="7. Modificación de los Términos"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Nos reservamos el derecho de modificar este aviso legal en cualquier momento. Las modificaciones serán publicadas en la App y entrarán en vigor inmediatamente después de su publicación."
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="8. Contacto"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="
+Para cualquier consulta o sugerencia sobre el uso de la App, puede ponerse en contacto con el equipo de desarrollo a través de user@user.cl."
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp">
+            </TextView>
+
 
         </LinearLayout>
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
 
-    </LinearLayout>
+    </ScrollView>
+
+
 
 </LinearLayout>

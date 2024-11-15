@@ -23,7 +23,7 @@ public class LoginListo extends AppCompatActivity {
             return insets;
         });
 
-        int tiempoTranscurrir = 2000; //1 segundo, 1000 millisegundos.
+        int tiempoTranscurrir = 2000;
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -37,7 +37,7 @@ public class LoginListo extends AppCompatActivity {
 
                 handler.removeCallbacks(null);
             }
-        }, tiempoTranscurrir );//define el tiempo.
+        }, tiempoTranscurrir );
 
     }
 }

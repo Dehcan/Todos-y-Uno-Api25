@@ -30,20 +30,11 @@ public class Inicio extends AppCompatActivity {
             @Override
             public void run() {
 
-                //***Aquí agregamos el proceso a ejecutar.
-
                 Intent inicio = new Intent(Inicio.this, Login.class);
                 startActivity(inicio);
 
                 handler.removeCallbacks(null);
             }
-        }, tiempoTranscurrir );//define el tiempo.
-
-
-
-
-
+        }, tiempoTranscurrir );
     }
-
-
 }
