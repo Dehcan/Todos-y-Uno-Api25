@@ -69,20 +69,6 @@ public class Menu extends AppCompatActivity {
             return insets;
         });
 
-/*        ImageButton cerrar_sesion = findViewById(R.id.logoutboton);
-        cerrar_sesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Toast.makeText(Menu.this,"Sesión cerrada con exito", Toast.LENGTH_LONG).show();
-
-                Intent intent = new Intent(Menu.this, Login.class);
-                startActivity(intent);
-                finish();
-
-            }
-        });*/
-
         ImageButton menu2 = (ImageButton) findViewById(R.id.menuboton);
         menu2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,10 +122,5 @@ public class Menu extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
     }
 }
