@@ -18,12 +18,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            android:layout_weight="1"
+            android:layout_weight="1.5"
             android:orientation="vertical">
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
                 app:srcCompat="@drawable/logo3"
                 android:scaleType="centerCrop"/>
         </LinearLayout>
@@ -32,73 +31,84 @@
     </LinearLayout>
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_weight="1"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="inicio sesión"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Por favor, inicia sesión con tu cuenta"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="8dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="inicio sesión"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Por favor, inicia sesión con tu cuenta"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ingresa tu email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:id="@+id/et_correo"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contrseña"
-        android:textSize="20sp"
-        android:textColor="#FFFFFF"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ingrese su contraseña"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:id="@+id/et_contraseña"
-        />
-    <CheckBox
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Recordar contraseña"
-        android:textColor="@color/black"
-        android:layout_gravity="center"
-        android:textAlignment="center"
-        android:id="@+id/rememberpass"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="iniciar sesión"
-        android:textColor="@color/black"
-        android:id="@+id/iniciarsesion"
-        android:backgroundTint="#FFFFFF"
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingresa tu email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:id="@+id/et_correo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contrseña"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese su contraseña"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:id="@+id/et_contraseña"
+            />
+        <CheckBox
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:text="Recordar contraseña"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:id="@+id/rememberpass"
+            />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Registrarme"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/registrarme"
+            android:backgroundTint="#FFFFFF"
 
-        />
+            />
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="iniciar sesión"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:id="@+id/iniciarsesion"
+            android:backgroundTint="#FFFFFF"
+
+            />
 
 
     </LinearLayout>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,7 +38,6 @@ public class Notificaciones extends AppCompatActivity {
                 Intent intent = new Intent(Notificaciones.this, Silenciar.class);
                 startActivity(intent);
                 finish();
-
             }
         });
 

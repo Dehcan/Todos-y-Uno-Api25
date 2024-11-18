@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -37,6 +39,17 @@ public class Aviso extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.aviso);
 
+
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton selectedRadioButton = findViewById(checkedId);
+                String selectedText = selectedRadioButton.getText().toString();
+                Toast.makeText(Aviso.this, "Seleccionado: " + selectedText, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         ImageButton botonretroceder = (ImageButton) findViewById(R.id.backbutton);
         botonretroceder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,16 +60,20 @@ public class Aviso extends AppCompatActivity {
             }
         });
 
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.aviso), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+
+
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
-        Button volver = findViewById(R.id.bt_subiraviso);
+        Button volver = findViewById(R.id.subiraviso);
         EditText descripcion = findViewById(R.id.et_descripcion_aviso);
 
 
