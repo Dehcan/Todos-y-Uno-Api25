@@ -18,33 +18,20 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="horizontal">
+        android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="150dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:text="Reportar un Usuario"
-                android:layout_centerInParent="true"
                 android:textColor="@color/white"
-                android:textSize="25sp">
+                android:textSize="25sp"
+                android:textStyle="bold">
 
             </TextView>
         </RelativeLayout>
@@ -52,23 +39,31 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-<!--Aqui tenemos que modificarlo para que aparezca la lista de usuarios que estan en la app-->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:clipToPadding="false"
-            />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <!--Aqui tenemos que modificarlo para que aparezca la lista de usuarios que estan en la app-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:paddingTop="20dp"
+                android:clipToPadding="false"
+                />
 
 
 
 
 
-    </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
 </LinearLayout>

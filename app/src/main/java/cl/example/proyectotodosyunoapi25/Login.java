@@ -48,6 +48,17 @@ public class Login extends AppCompatActivity {
             finish();
         }
 
+        Button aviso = (Button) findViewById(R.id.registrarme);
+        aviso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, Register.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+
     Button iniciar_sesion = findViewById(R.id.iniciarsesion);
     iniciar_sesion.setOnClickListener(new View.OnClickListener() {
         @Override

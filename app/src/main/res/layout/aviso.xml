@@ -17,21 +17,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3.2"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_weight="3.5"
         android:orientation="vertical">
 
@@ -57,17 +42,52 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="5">
-            <RelativeLayout
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nivel 1" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nivel 2" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Nivel 3" />
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Selecciona el nivel de peligro, donde 1 es el mas leve y 3 es el mas fuerte"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12sp">
+
+            </TextView>
+
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_weight="4">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -94,10 +114,25 @@
 
             </EditText>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="">
+
+            </TextView>
+
+
+
+
+
         </RelativeLayout>
 
 
+
+
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -106,15 +141,48 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <Button
-                android:id="@+id/bt_subiraviso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enviar aviso"
-                android:layout_centerInParent="true"
-                android:textSize="20dp">
 
-            </Button>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3.4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <Button
+                        android:id="@+id/subiraviso"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enviar Reporte"
+                        android:layout_centerInParent="true"
+                        android:textSize="20dp"/>
+
+                    <Button
+                        android:id="@+id/añadir_imagen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:text="Añadir imágen"
+                        android:textSize="20dp"
+                        />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignTop="@+id/añadir_imagen"
+                        android:layout_alignLeft="@+id/añadir_imagen"
+                        android:src="@drawable/imagen"
+                        android:scaleType="fitXY"
+                        android:backgroundTint="@color/fondo"
+                        android:layout_marginLeft="-50dp"
+                        />
+
+
+                </RelativeLayout>
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
+
 </LinearLayout>

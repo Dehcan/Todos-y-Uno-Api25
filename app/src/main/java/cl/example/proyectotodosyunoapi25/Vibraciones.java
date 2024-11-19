@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,11 @@ public class Vibraciones extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        int tiempoTranscurrir = 2000; //1 segundo, 1000 millisegundos.
+        Toast.makeText(Vibraciones.this, "Función actualmente en desarrollo", Toast.LENGTH_LONG).show();
+
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.vibraciones);
