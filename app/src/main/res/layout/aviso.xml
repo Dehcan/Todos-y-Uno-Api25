@@ -51,6 +51,8 @@
 
                 <RadioButton
                     android:id="@+id/radioButton1"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -59,12 +61,16 @@
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Nivel 2" />
 
                 <RadioButton
                     android:id="@+id/radioButton3"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

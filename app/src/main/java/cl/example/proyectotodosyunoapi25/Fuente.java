@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +21,17 @@ public class Fuente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.fuente);
+
+
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton selectedRadioButton = findViewById(checkedId);
+                String selectedText = selectedRadioButton.getText().toString();
+                Toast.makeText(Fuente.this, "Seleccionado", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         ImageButton botonretroceder = (ImageButton) findViewById(R.id.backbutton);
         botonretroceder.setOnClickListener(new View.OnClickListener() {
