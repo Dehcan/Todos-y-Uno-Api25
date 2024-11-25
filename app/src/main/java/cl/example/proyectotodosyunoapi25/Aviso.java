@@ -50,7 +50,7 @@ public class Aviso extends AppCompatActivity {
             }
         });
 
-        ImageButton botonretroceder = findViewById(R.id.backbutton);
+        ImageButton botonretroceder = (ImageButton) findViewById(R.id.backbutton);
         botonretroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
