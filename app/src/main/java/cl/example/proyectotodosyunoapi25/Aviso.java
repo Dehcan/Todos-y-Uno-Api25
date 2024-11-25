@@ -50,7 +50,7 @@ public class Aviso extends AppCompatActivity {
             }
         });
 
-        ImageButton botonretroceder = (ImageButton) findViewById(R.id.backbutton);
+        ImageButton botonretroceder = findViewById(R.id.backbutton);
         botonretroceder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,6 @@ public class Aviso extends AppCompatActivity {
         });
 
 
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.aviso), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -69,13 +68,37 @@ public class Aviso extends AppCompatActivity {
         });
 
 
-
         mAuth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
 
         Button volver = findViewById(R.id.subiraviso);
         EditText descripcion = findViewById(R.id.et_descripcion_aviso);
+        RadioGroup radioGroupNiveles = findViewById(R.id.radioGroup);
 
+
+// Obtén el ID del RadioButton seleccionado
+        int selectedId = radioGroupNiveles.getCheckedRadioButtonId();
+
+// Define una variable para almacenar el nivel
+        int nivelSeleccionado = 0;
+
+// Evalúa cuál botón está seleccionado
+        if (selectedId == R.id.radioButton1) {
+
+        } else if (selectedId == R.id.radioButton2) {
+
+        } else if (selectedId == R.id.radioButton3) {
+
+        }
+        if (selectedId == -1) { // -1 significa que no se seleccionó ningún botón
+            Toast.makeText(this, "Por favor, selecciona un nivel", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (descripcion.getText().toString().trim().isEmpty()) {
+            Toast.makeText(this, "Por favor, escribe un aviso", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
 
         volver.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +106,7 @@ public class Aviso extends AppCompatActivity {
             public void onClick(View view) {
 
                 String descripcion_av = descripcion.getText().toString().trim();
-                guardar_aviso(descripcion_av);
+                guardar_aviso(descripcion_av, nivelSeleccionado);
 
                 Intent enviaravi = new Intent(Aviso.this, Menu.class);
                 startActivity(enviaravi);
@@ -93,38 +116,22 @@ public class Aviso extends AppCompatActivity {
         });
 
 
-
-
     }
-    public void guardar_aviso(String descripcion){
+    public void guardar_aviso(String descripcion, int nivelSeleccionado){
         String userId = mAuth.getCurrentUser().getUid();
 
         Map<String, Object> aviso = new HashMap<>();
+        aviso.put("nivel", nivelSeleccionado);
         aviso.put("descripcion", descripcion);
-        aviso.put("fecha_publicacion", new Date());
+        aviso.put("fecha", new Timestamp(new Date()));
 
-        db.collection("avisos").document(userId).set(aviso)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),
-                                    "Aviso guardado correctamente",
-                                    Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getApplicationContext(),
-                                    "Error al guardar el aviso del usuario",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
+        db.collection("avisos")
+                .add(aviso)
+                .addOnSuccessListener(documentReference -> {
+                    Toast.makeText(this, "Aviso guardado", Toast.LENGTH_SHORT).show();
                 })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(getApplicationContext(),
-                                "Error: " + e.getMessage(),
-                                Toast.LENGTH_SHORT).show();
-                    }
+                .addOnFailureListener(e -> {
+                    Toast.makeText(this, "Error al guardar el aviso", Toast.LENGTH_SHORT).show();
                 });
 
     }

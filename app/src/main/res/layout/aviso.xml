@@ -161,7 +161,7 @@
                         android:id="@+id/subiraviso"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Enviar Reporte"
+                        android:text="Enviar Aviso"
                         android:layout_centerInParent="true"
                         android:textSize="20dp"/>
 

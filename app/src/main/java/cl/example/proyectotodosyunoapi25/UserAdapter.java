@@ -41,7 +41,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     public void onBindViewHolder(UserViewHolder holder, int position) {
         User user = userList.get(position);
         holder.userName.setText(user.getNombre());
-        // Aquí puedes cargar la imagen si tienes una URL o algún identificador
+
     }
 
     @Override

@@ -2,74 +2,77 @@ package cl.example.proyectotodosyunoapi25;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HistorialAvisos extends AppCompatActivity {
+
+    private FirebaseFirestore db;
+    private List<Avisos> avisosList;
+    private AvisoAdapter avisoAdapter;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.historial_avisos);
 
-        ImageButton botonretroceder = (ImageButton) findViewById(R.id.backbutton);
-        botonretroceder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HistorialAvisos.this, Menu2.class);
-                startActivity(intent);
-                finish();
-            }
+        // Inicializar RecyclerView
+        recyclerView = findViewById(R.id.recyclerAvisos);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        avisosList = new ArrayList<Avisos>();
+        avisoAdapter = new AvisoAdapter(avisosList);
+        recyclerView.setAdapter(avisoAdapter);
+
+        // Configurar botón para retroceder
+        ImageButton botonretroceder = findViewById(R.id.backbutton);
+        botonretroceder.setOnClickListener(view -> {
+            Intent intent = new Intent(HistorialAvisos.this, Menu2.class);
+            startActivity(intent);
+            finish();
         });
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.historialavisos), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
-        TextView texto1 = findViewById(R.id.fecha_hist1);
-        texto1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent texto1 = new Intent(HistorialAvisos.this, HistorialAvisosImagen.class);
-                startActivity(texto1);
 
 
-            }
-        });
 
-        TextView texto2 = findViewById(R.id.fecha_hist2);
-        texto2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent texto2 = new Intent(HistorialAvisos.this, HistorialAvisosImagen.class);
-                startActivity(texto2);
+            cargarAvisos();
+        }
 
 
-            }
-        });
-
-        TextView texto3 = findViewById(R.id.fecha_hist3);
-        texto3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent texto3 = new Intent(HistorialAvisos.this, HistorialAvisosImagen.class);
-                startActivity(texto3);
-
-
-            }
-        });
+    private void cargarAvisos() {
+        db = FirebaseFirestore.getInstance();
+        db.collection("avisos")
+                .orderBy("fecha", Query.Direction.DESCENDING)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        avisosList.clear();
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            String fecha;
+                            if (document.get("fecha") instanceof com.google.firebase.Timestamp) {
+                                fecha = document.getTimestamp("fecha").toDate().toString();
+                            } else {
+                                fecha = document.getString("fecha"); // Si es texto
+                            }
+                            String descripcion = document.getString("descripcion");
+                            int nivel = document.getLong("nivel") != null ? document.getLong("nivel").intValue() : 0;
+                            avisosList.add(new Avisos(fecha, descripcion, nivel));
+                        }
+                        avisoAdapter.notifyDataSetChanged();
+                    } else {
+                        Toast.makeText(this, "Error al cargar los avisos", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }
